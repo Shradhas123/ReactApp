@@ -12,11 +12,9 @@ const LoginScreen: React.FC<LoginScreenProps> = ({ onLoginSuccess }) => {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    // You can add validation/auth logic here
     if (email && password) {
       onLoginSuccess();
     } else {
-      // alert('Please enter email and password');
     }
   };
 
