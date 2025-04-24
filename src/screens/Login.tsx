@@ -8,11 +8,11 @@ type LoginScreenProps = {
 };
 
 const LoginScreen: React.FC<LoginScreenProps> = ({ onLoginSuccess }) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [phoneNumber, setEmail] = useState('8917507054');
+  const [password, setPassword] = useState('1234');
 
-  const handleLogin = () => {
-    if (email && password) {
+  const login = () => {
+    if (phoneNumber && password) {
       onLoginSuccess();
     } else {
     }
@@ -22,20 +22,15 @@ const LoginScreen: React.FC<LoginScreenProps> = ({ onLoginSuccess }) => {
     <View style={styles.container}>
       <Text style={styles.title}>Welcome Back!</Text>
       <Text>Please login to your account</Text>
-
-      <InputField placeholder="Enter your Mail ID" value={email} onChangeText={setEmail} />
+      <InputField placeholder="Enter your Mail ID/Phone Number" value={phoneNumber} onChangeText={setEmail} />
       <InputField placeholder="Enter your Password" value={password} onChangeText={setPassword} secureTextEntry />
-
       <TouchableOpacity>
         <Text style={styles.link}>Forget Password?</Text>
       </TouchableOpacity>
-
-      <Button label="Login" onPress={handleLogin} />
-
+      <Button label="Login" onPress={login} />
       <TouchableOpacity>
         <Text style={styles.link}>Login with Google</Text>
       </TouchableOpacity>
-
       <TouchableOpacity>
         <Text style={styles.link}>Don’t have an account? Sign Up?</Text>
       </TouchableOpacity>
@@ -43,6 +38,7 @@ const LoginScreen: React.FC<LoginScreenProps> = ({ onLoginSuccess }) => {
   );
 };
 
+export default LoginScreen;
 const styles = StyleSheet.create({
   container: {
     padding: 20,

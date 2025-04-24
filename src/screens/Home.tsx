@@ -6,7 +6,6 @@ const HomeScreen: React.FC = () => {
     <ScrollView style={styles.container}>
       <Text style={styles.header}>Hi, xxxx</Text>
       <Text style={styles.subheader}>Total Power Input</Text>
-
       <View style={styles.usageRow}>
         <View style={styles.usageBox}>
           <Text style={styles.usageTitle}>Today</Text>
@@ -33,7 +32,6 @@ const HomeScreen: React.FC = () => {
     </ScrollView>
   );
 };
-
 const styles = StyleSheet.create({
   container: { padding: 20, backgroundColor: '#fff' },
   header: { fontSize: 35, fontWeight: 'bold' },
